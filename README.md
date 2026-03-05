@@ -273,13 +273,21 @@ erDiagram
 - Um funcionário pode ser paciente ao realizar um agendamento
 - O histórico do paciente é preservado mesmo após exclusão de senhas ou agendamentos
 
+
 ---
 
 ## Versão
 
 | Versão | Descrição |
 |---|---|
-| 1.0.4 | Estrutura inicial com especialidade vinculada ao funcionário |
+| 1.0.0 | Estrutura inicial — PESSOAS, CLIENTES, ATENDENTES, AGENDAMENTOS, TURNOS e AGENDAS com controle de vagas |
+| 1.0.1 | CLIENTES renomeado para PACIENTES, ATENDENTES para FUNCIONARIOS |
+| 1.0.2 | Adicionado REGIOES e WhatsApp em UNIDADES |
+| 1.0.3 | FUNCIONARIOS_UNIDADES criado — médico pode atender em múltiplas unidades |
+| 1.0.4 | ESPECIALIDADES criado como tabela própria com prefixo de senha |
+| 1.0.5 | ESPECIALIDADES movida para vínculo direto com FUNCIONARIOS |
+| 1.0.6 | AGENDAS passa a referenciar `funcionario_unidade_id` — elimina redundância |
+| 1.0.7 | SENHAS recebe `unidade_id` direto — consultas por unidade simplificadas |
 
 ---
 
