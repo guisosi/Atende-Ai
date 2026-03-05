@@ -286,7 +286,6 @@ erDiagram
 ## Referências
 
 - [Atividade prática — CafeGeek](https://cafegeek.eti.br/banco%20de%20dados/modelagem-de-banco-de-dados-com-postgresql-atividade-pratica-passo-a-passo/)
-- [SGA Livre — DATAPREV](https://softwarepublico.gov.br/social/sga)
 - [Mermaid Live Editor](https://mermaid.live/)
 - [PostgreSQL Docs](https://www.postgresql.org/docs/)
 
