@@ -60,7 +60,7 @@ Atendimento registrado e concluído
 
 ```mermaid
 erDiagram
-GENEROS {
+SEXO {
     serial id PK
     varchar descricao
 }
@@ -187,7 +187,7 @@ PESSOAS {
         timestamp created_at
     }
 
-    PESSOAS ||--o{ GENEROS : "possui"
+    PESSOAS ||--o{ SEXO : "possui"
     PESSOAS ||--o| PACIENTES : "pode ser"
     PESSOAS ||--o| FUNCIONARIOS : "pode ser"
     ESPECIALIDADES ||--o{ FUNCIONARIOS : "define"
@@ -236,7 +236,13 @@ PESSOAS {
 
 **Atendimentos** — Registro completo de cada atendimento. Referencia senha, paciente e funcionário diretamente.
 
-**Gêneros** — Tabela de domínio com os valores fixos de gênero. Evita inconsistências no cadastro de pessoas.
+**Sexo** — Tabela de domínio com os valores fixos do sexo. Evita inconsistências no cadastro de pessoas.
+
+| ID | Descrição |
+|----|-----------|
+| 1  | Masculino |
+| 2  | Feminino  |
+| 3  | Prefiro não informar |
 
 ---
 
