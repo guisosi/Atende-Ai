@@ -236,6 +236,8 @@ PESSOAS {
 
 **Atendimentos** — Registro completo de cada atendimento. Referencia senha, paciente e funcionário diretamente.
 
+**Gêneros** — Tabela de domínio com os valores fixos de gênero. Evita inconsistências no cadastro de pessoas.
+
 ---
 
 ## Campos de status
