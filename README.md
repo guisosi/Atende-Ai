@@ -60,18 +60,23 @@ Atendimento registrado e concluído
 
 ```mermaid
 erDiagram
-    PESSOAS {
-        serial id PK
-        varchar cpf
-        varchar nome
-        varchar sobrenome
-        date data_nascimento
-        varchar genero
-        varchar telefone
-        varchar email
-        varchar endereco
-        timestamp created_at
-    }
+GENEROS {
+    serial id PK
+    varchar descricao
+}
+
+PESSOAS {
+    serial id PK
+    int genero_id FK
+    varchar cpf
+    varchar nome
+    varchar sobrenome
+    date data_nascimento
+    varchar telefone
+    varchar email
+    varchar endereco
+    timestamp created_at
+}
 
     PACIENTES {
         serial id PK
@@ -182,6 +187,7 @@ erDiagram
         timestamp created_at
     }
 
+    PESSOAS ||--o{ GENEROS : "possui"
     PESSOAS ||--o| PACIENTES : "pode ser"
     PESSOAS ||--o| FUNCIONARIOS : "pode ser"
     ESPECIALIDADES ||--o{ FUNCIONARIOS : "define"
@@ -288,6 +294,7 @@ erDiagram
 | 1.0.5 | ESPECIALIDADES movida para vínculo direto com FUNCIONARIOS |
 | 1.0.6 | AGENDAS passa a referenciar `funcionario_unidade_id` — elimina redundância |
 | 1.0.7 | SENHAS recebe `unidade_id` direto — consultas por unidade simplificadas |
+| 1.0.8 | GENEROS recebe uma tablea separada |
 
 ---
 
