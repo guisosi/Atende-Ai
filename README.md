@@ -67,7 +67,7 @@ SEXO {
 
 PESSOAS {
     serial id PK
-    int genero_id FK
+    int sexo_id FK
     varchar cpf
     varchar nome
     varchar sobrenome
@@ -100,6 +100,7 @@ PESSOAS {
         int especialidade_id FK
         varchar matricula
         varchar cargo
+        numeric salario
         boolean ativo
         timestamp created_at
     }
@@ -302,7 +303,9 @@ PESSOAS {
 | 1.0.5 | ESPECIALIDADES movida para vínculo direto com FUNCIONARIOS |
 | 1.0.6 | AGENDAS passa a referenciar `funcionario_unidade_id` — elimina redundância |
 | 1.0.7 | SENHAS recebe `unidade_id` direto — consultas por unidade simplificadas |
-| 1.0.8 | GENEROS recebe uma tablea separada |
+| 1.0.8 | SEXO recebe uma tablea separada |
+| 1.0.9 | Adicionado campo SALARIO em FUNCIONARIOS |
+
 
 ---
 
