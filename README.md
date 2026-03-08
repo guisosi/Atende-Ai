@@ -1,4 +1,4 @@
-# Atende 1.0.9 🎫
+# Atende 🎫
 
 Sistema de agendamento e gerenciamento de atendimento hospitalar. O paciente entra em contato pelo telefone ou WhatsApp, a atendente realiza o cadastro e define o agendamento. Ao chegar na unidade, o paciente pega a senha da sua especialidade e aguarda ser chamado.
 
